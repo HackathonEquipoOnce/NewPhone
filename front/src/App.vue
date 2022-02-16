@@ -1,30 +1,28 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link class="home" to="/">Home</router-link>|
+    <router-link class="contacts" :to="{name: 'contactsPage'}">Contacts</router-link>|
+    <router-link class="newcontact" :to="{name: 'addNewContact'}">Add New Contact</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>  
+.home{
+  background: rgb(35, 207, 230);
+  padding: 5px;
   text-align: center;
-  color: #2c3e50;
+  border-radius: 5px;
 }
-
-#nav {
-  padding: 30px;
+.contacts{
+  background: rgb(9, 79, 231);
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.newcontact{
+  background: rgb(226, 5, 160);
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
 }
 </style>

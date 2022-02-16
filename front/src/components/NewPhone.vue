@@ -5,7 +5,6 @@
 export default {
   name: 'NewPhone',
   props: {
-    msg: String
   }
 }
 </script>

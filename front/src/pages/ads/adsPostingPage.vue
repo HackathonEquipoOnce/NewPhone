@@ -40,13 +40,13 @@ export default {
                                 "phone": this.phone
                                 }
 				this.contacts.push(newProduct)
-				const settings={
-					method:'POST',
-					body:JSON.stringify(newProduct),
-					headers:{
-						'Content-Type': 'application/json'
-					}
-				}
+				//const settings={
+					//method:'POST',
+					//body:JSON.stringify(newProduct),
+					//headers:{
+						//'Content-Type': 'application/json'
+					//}
+				//}
 				//fetch('http://localhost:5000/api/contact', settings)
 			}
 			else{

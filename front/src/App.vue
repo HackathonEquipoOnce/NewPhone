@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link class="home" to="/">new Phone</router-link>|
+    <router-link class="home" :to="{name: 'newphone'} ">new Phone</router-link>|
     <router-link class="newphone" :to="{name: 'newphone'}">phones</router-link>|
     <router-link class="adsposting" :to="{name: 'adsposting'}">post Ads for free</router-link>
   </div>

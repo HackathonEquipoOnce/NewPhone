@@ -22,10 +22,10 @@ export default {
     };
   },
   async mounted() {
-    await fetch("http://localhost:5000/api/contact/" + this.id)
-    .then(res => res.json())
-    .then(data => this.contact = data)
-    .catch(err=> console.log(err.message))
+   // await fetch("http://localhost:5000/api/contact/" + this.id)
+   // .then(res => res.json())
+   // .then(data => this.contact = data)
+    //.catch(err=> console.log(err.message))
   },
   methods:{
     removeContact(){

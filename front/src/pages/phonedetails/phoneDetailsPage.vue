@@ -1,11 +1,11 @@
 <template>
   <p>{{id}} </p>
-  <section class="contact-details">
-  <h2>{{ contact.first_name }}</h2>
-  <p>{{ contact.last_name }}</p>
-  <p>{{ contact.email }}</p>
-  <p>{{ contact.phone }}</p><br><br>
-  <router-link :to="{name:'contactdetails'}" @click="removeContact" ><button>remove contact</button></router-link>
+  <section class="phone-details">
+  <h2>{{ phone.price }}</h2>
+  <p>{{ phone.price }}</p>
+  <p>{{ phone.price}}</p>
+  <p>{{ phone.price }}</p><br><br>
+  <router-link :to="{name:'phonedetails'}" @click="removephone" ><button>remove phone</button></router-link>
   </section>
 </template>
 
@@ -13,11 +13,11 @@
 import Swal from 'sweetalert2';
 //window.Swal= Swal;
 export default {
-  name:'contactdetails',
+  name:'phonedetails',
   props:['id'],
   data() {
     return {
-      contact: [],
+      phone: {},
       Response:''
     };
   },
@@ -28,7 +28,7 @@ export default {
     //.catch(err=> console.log(err.message))
   },
   methods:{
-    removeContact(){
+    removephone(){
           Swal.fire({
       title: 'estas seguro?',
       text: "You won't be able to revert this!",
@@ -39,8 +39,8 @@ export default {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-          this.Response= fetch("http://localhost:5000/api/contact/" + this.id, {method: "DELETE"});
-          this.$router.push('/contact')
+          //this.Response= fetch("http://localhost:5000/api/newphone/" + this.id, {method: "DELETE"});
+          this.$router.push('/newphone')
           Swal.fire(
             'Deleted!',
             'Your file has been deleted.',

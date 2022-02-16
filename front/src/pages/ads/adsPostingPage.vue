@@ -1,10 +1,10 @@
 <template>
-  <form @submit.prevent="addNewContact" class="add">
-  <input type="text" v-model="firstName" placeholder="Contact First Name" class="adding"/><br><br>
-  <input type="text" v-model="lastName" placeholder="Contact Last Name" class="adding"/><br><br>
-  <input type="email" v-model="email" placeholder="Contact Email" class="adding"/><br><br>
-  <input type="number" v-model="phone" placeholder="Contact Phone" class="adding"/><br><br><br>
-  <button>Save Contact</button>
+  <form @submit.prevent="postAds" class="ads">
+  <input type="text" v-model="phone.price" placeholder="Phone.price" class="adding"/><br><br>
+  <input type="text" v-model="phone.details" placeholder="Phone.price" class="adding"/><br><br>
+  <input type="email" v-model="phone.name" placeholder="Phone.price" class="adding"/><br><br>
+  <input type="number" v-model="phone.model" placeholder="Phone.price" class="adding"/><br><br><br>
+  <button>Save phone</button>
   </form>
 </template>
 
@@ -14,11 +14,11 @@ uuidv4();
 export default {
    data(){
        return{
-           contacts:[],
+           phone:[],
            firstName: '',
            lastName: '',
            email:'',
-           phone:'',
+           
        }
    },
    mounted(){
@@ -29,15 +29,15 @@ export default {
           // const response = await fetch("http://localhost:5000/api/contact");
            //this.contacts = await response.json();
        },
-       addNewContact(){
-            if(this.firstName&&this.lastName &&this.email&&this.phone !==''){
+       postAds(){
+            if(this.phone.price||this.phone.details||this.phone.name||this.phone.model !==''){
                 let nextId= uuidv4()
 				let newProduct={ 
                                 "id": nextId,
-                                "first_name":this.firstName,
-                                "last_name":this.lastName,
-                                "email": this.email,
-                                "phone": this.phone
+                                "phone.price":this.phone.model,
+                                "phone.details":this.phone.model,
+                                "phone.name": this.phone.model,
+                                "phone.model": this.phone.model
                                 }
 				this.contacts.push(newProduct)
 				//const settings={
@@ -52,10 +52,10 @@ export default {
 			else{
 				alert ("must fill all camps before saving")
 			}
-				this.firstName='';
-				this.lastName='';
-				this.email='';
-                this.phone=''
+				this.phone.model='';
+				this.phone.model='';
+				this.phone.model='';
+                this.phone.model=''
        }
    }
 }

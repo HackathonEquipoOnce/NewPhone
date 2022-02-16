@@ -1,16 +1,16 @@
 <template>
   <h2>{{welcome}} </h2>
-   <section class="contact-list">
+   <section class="phone-list">
     <article
-      class="contact-item"
-      v-for="contact in contacts"
-      :key="contact.phone"
+      class="phone-item"
+      v-for="phone in phones"
+      :key="phone.id"
     >
-    <h2>{{ contact.first_name }}</h2>
-    <p>{{ contact.last_name }}</p>
-    <p>{{ contact.phone }}</p><br>
-    <router-link :to="{name:'phonedetails', params:{id: contact.id}}" ><button>detaills</button></router-link><br><br>
-    <button class="remove" @click="del(contact)" >remove contact</button>
+    <h2>{{ phone.price }}</h2>
+    <p>{{ phone.price }}</p>
+    <p>{{ phone.price }}</p><br>
+    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button>detaills</button></router-link><br><br>
+    <button class="remove" @click="del(phone)" >remove contact</button>
     </article>
   </section>
 </template>
@@ -20,8 +20,8 @@ export default {
     data(){
       return{
         welcome:"Welcome To Your new phone page",
-        contacts: [],
-        contact_removed:'',
+        phones: [],
+        phone_removed:'',
       }
     },
       methods: {
@@ -29,10 +29,10 @@ export default {
      // const response = await fetch("http://localhost:5000/api/contact");
       //this.contacts = await response.json();
     },
-    del(contact){
+    del(phone){
       
-      let index=this.contacts.indexOf(contact)
-      this.contact_removed=this.contacts.splice(index, 1)
+      let index=this.phones.indexOf(phone)
+      this.phone_removed=this.phones.splice(index, 1)
       console.log("elemento borrado")
     }
   },

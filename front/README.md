@@ -1,4 +1,4 @@
-# Aplicación Contact List (front)
+# Aplicación Newphone (front)
 
 ## Configuración del proyecto
 

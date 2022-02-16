@@ -1,8 +1,8 @@
 <template>
   <div id="nav">
-    <router-link class="home" to="/">Home</router-link>|
-    <router-link class="contacts" :to="{name: 'contactsPage'}">Contacts</router-link>|
-    <router-link class="newcontact" :to="{name: 'addNewContact'}">Add New Contact</router-link>
+    <router-link class="home" to="/">new Phone</router-link>|
+    <router-link class="newphone" :to="{name: 'newphone'}">phones</router-link>|
+    <router-link class="adsposting" :to="{name: 'adsposting'}">post Ads for free</router-link>
   </div>
   <router-view />
 </template>

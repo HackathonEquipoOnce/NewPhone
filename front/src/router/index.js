@@ -1,37 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import home from '@/pages/home/homePage.vue'
-import contactdetails from '@/pages/contactdetails/contactDetailsPage.vue'
-import contactsPage from '@/pages/contacts/contactsPage.vue'
-import addNewContact  from '@/pages/newContact/newContactAddingPage.vue'
+import newphone from '@/pages/home/NewPhonePage.vue'
+import phonedetails from '@/pages/phonedetails/phoneDetailsPage.vue'
+import adsposting  from '@/pages/ads/adsPostingPage.vue'
 
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: home
+    name: 'newphone',
+    component: newphone
   },
   {
-    path: '/contact/:id',
-    name: 'contactdetails',
-    component: contactdetails,
+    path: '/newphone/:id',
+    name: 'phonedetails',
+    component: phonedetails,
     props: true
   },
   {
-    path: '/contact/:id',
-    name: 'contactSetup',
-    component: contactdetails,
-    props: true
-  },
-  {
-    path: '/contact/add',
-    name: 'addNewContact',
-    component: addNewContact
-  },
-  {
-    path: '/contact',
-    name: 'contactsPage',
-    component: contactsPage
+    path: '/newphone/add',
+    name: 'adsposting',
+    component: adsposting
   },
 ]
 

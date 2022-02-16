@@ -15,9 +15,10 @@ export default {
    data(){
        return{
            phone:[],
-           firstName: '',
-           lastName: '',
-           email:'',
+           price: '',
+           details: '',
+           name:'',
+           model:''
            
        }
    },
@@ -26,7 +27,7 @@ export default {
    },
    methods:{
        async loadData(){
-          // const response = await fetch("http://localhost:5000/api/contact");
+          // const response = await fetch("http://localhost:5000/api/phone");
            //this.contacts = await response.json();
        },
        postAds(){
@@ -47,7 +48,7 @@ export default {
 						//'Content-Type': 'application/json'
 					//}
 				//}
-				//fetch('http://localhost:5000/api/contact', settings)
+				//fetch('http://localhost:5000/api/phone', settings)
 			}
 			else{
 				alert ("must fill all camps before saving")

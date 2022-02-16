@@ -26,8 +26,8 @@ export default {
     },
       methods: {
     async loadData() {
-     // const response = await fetch("http://localhost:5000/api/contact");
-      //this.contacts = await response.json();
+     // const response = await fetch("http://localhost:5000/api/phone");
+      //this.phones = await response.json();
     },
     del(phone){
       

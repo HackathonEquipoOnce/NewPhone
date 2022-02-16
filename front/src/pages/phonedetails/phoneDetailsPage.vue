@@ -22,9 +22,9 @@ export default {
     };
   },
   async mounted() {
-   // await fetch("http://localhost:5000/api/contact/" + this.id)
+   // await fetch("http://localhost:5000/api/phone/" + this.id)
    // .then(res => res.json())
-   // .then(data => this.contact = data)
+   // .then(data => this.phone = data)
     //.catch(err=> console.log(err.message))
   },
   methods:{

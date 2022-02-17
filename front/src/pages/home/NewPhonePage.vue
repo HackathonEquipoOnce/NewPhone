@@ -32,7 +32,7 @@
 export default {
     data(){
       return{
-        welcome:"Welcome To Your new phone page",
+        welcome:"Tu movil viejo por uno nuevo facil a poco precio ",
         imgage:'./Logo1.png',
         img: './firstimage.png',
         phones: [

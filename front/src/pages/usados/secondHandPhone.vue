@@ -1,6 +1,5 @@
 <template>
-
-  <h2>{{welcome}}  </h2>
+<h2>{{welcome}}  </h2>
     <img class="banner" src="@/assets/img/firstimage.png" />
      <h1>Populares</h1>
       <div class="container">

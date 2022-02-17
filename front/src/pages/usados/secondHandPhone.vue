@@ -67,7 +67,7 @@ export default {
           {id:4, nombre:"samsung", precio:"230 $", caracteristicas:"camera 64MP"},
           {id:5, nombre:"samsung", precio:"290 $", caracteristicas:"camera 64MP"},
           {id:6, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP"}, 
-          {id:7, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP",},    
+          {id:7, nombre:"iphone 12 S", precio:"350 $", caracteristicas:"camera 64MP",},    
         ],
         phone_removed:'',
       }

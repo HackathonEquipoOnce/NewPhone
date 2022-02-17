@@ -1,5 +1,5 @@
 <template>
-     <h1>Populares</h1>
+     <h1>{{Populares}}</h1>
       <div class="container">
   <ul class="slider">
     <li id="slide1">
@@ -55,7 +55,7 @@
 export default {
     data(){
       return{
-
+        Populares:"Populares",
         phones: [
           {id:1, nombre:"xiaomi redmi 10", precio:"201 $", caracteristicas:"camera 64MP"},
           {id:3, nombre:"xiaomi popofone", precio:"190 $", caracteristicas:"camera 64MP"},

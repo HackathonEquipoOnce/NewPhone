@@ -9,8 +9,8 @@
       </div>
     <div>
     
-    <router-link class="newphone" :to="{name: 'newphone'}">Nuevos</router-link>
-    <router-link class="adsposting" :to="{name: 'adsposting'}">Usados</router-link>
+    <router-link class="newphone" :to="{name: 'newphone'}"> Usados</router-link>
+    <router-link class="adsposting" :to="{name: 'adsposting'}">Nuevos</router-link>
   </div>
   <router-view />
 </template>

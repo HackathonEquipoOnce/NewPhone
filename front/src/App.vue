@@ -10,7 +10,7 @@
     <div>
     
     <router-link class="newphone" :to="{name: 'newphone'}"> Usados</router-link>
-    <router-link class="adsposting" :to="{name: 'adsposting'}">Nuevos</router-link>
+    <router-link class="adsposting" :to="{name: 'secondHandPhone'}">Nuevos</router-link>
   </div>
   <router-view />
 </template>

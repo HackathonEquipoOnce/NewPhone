@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import newphone from '@/pages/home/NewPhonePage.vue'
 import phonedetails from '@/pages/phonedetails/phoneDetailsPage.vue'
-import adsposting  from '@/pages/ads/adsPostingPage.vue'
+import secondHandPhone  from '@/pages/usados/secondHandPhone.vue'
 
 
 const routes = [
@@ -18,8 +18,8 @@ const routes = [
   },
   {
     path: '/newphone/add',
-    name: 'adsposting',
-    component: adsposting
+    name: 'secondHandPhone',
+    component: secondHandPhone
   },
 ]
 

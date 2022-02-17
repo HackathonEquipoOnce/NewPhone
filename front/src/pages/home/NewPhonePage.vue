@@ -1,4 +1,5 @@
 <template>
+
   <h2>{{welcome}} </h2>
   
     <img class="banner" src="@/assets/img/firstimage.png" />
@@ -8,7 +9,6 @@
       v-for="phone in phones"
       :key="phone.id"
     >
-    
     <div class='info'>
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>
@@ -43,12 +43,7 @@ export default {
      // const response = await fetch("http://localhost:5000/api/phone");
       //this.phones = await response.json();
     },
-    del(phone){
-      
-      let index=this.phones.indexOf(phone)
-      this.phones.splice(index, 1)
-      console.log("elemento borrado")
-    }
+ 
   },
 }
 </script>

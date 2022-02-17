@@ -8,7 +8,7 @@ from src.domain.newphone import NewphoneRepository, Newphone
 
 database_path = "data/database.db"
 
-contact_repository = NewphoneRepository(database_path)
+newphone_repository = NewphoneRepository(database_path)
 mobil_1 = Newphone(
     id= "1",
     nombre= "xiaomi redmi 10",
@@ -46,9 +46,9 @@ mobil_I = Newphone(
     caracteristicas= "camera 180MP",
 )
 
-contact_repository.save(mobil_1)
-contact_repository.save(mobil_2)
-contact_repository.save(mobil_s)
-contact_repository.save(mobil_S)
-contact_repository.save(mobil_i)
-contact_repository.save(mobil_I)
+newphone_repository.save(mobil_1)
+newphone_repository.save(mobil_2)
+newphone_repository.save(mobil_s)
+newphone_repository.save(mobil_S)
+newphone_repository.save(mobil_i)
+newphone_repository.save(mobil_I)

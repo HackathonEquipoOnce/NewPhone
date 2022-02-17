@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask_cors import CORS
-from src.domain.contact import Contact
+from src.domain.newphone import Newphone
 
 from src.lib.utils import object_to_json
 
@@ -14,27 +14,27 @@ def create_app(repositories):
         return "...magic!"
 
 
-    @app.route("/api/contact", methods=["GET"])
-    def contact_get_all():
-        contacts = repositories["contact"].get_all()
-        return object_to_json(contacts)
+    @app.route("/api/newphone", methods=["GET"])
+    def newphone_get_all():
+        newphones = repositories["newphone"].get_all()
+        return object_to_json(newphones)
 
-    @app.route("/api/contact", methods=["POST"])
-    def contact_contact_post():
-        body = request.json
-        contact = Contact(**body)
-        repositories["contact"].save(contact)
-        return ''
+    #@app.route("/api/newphone", methods=["POST"])
+    #def newphone_post():
+        #body = request.json
+        #newphone = Newphone(**body)
+        #repositories["newphone"].save(newphone)
+        #return ''
         
     
-    @app.route("/api/contact/<id>", methods=["GET"])
-    def contact_get_by_id(id):
-        contacts = repositories["contact"].get_by_id(id)
-        return object_to_json(contacts)
+    @app.route("/api/newphone/<id>", methods=["GET"])
+    def newphone_get_by_id(id):
+        newphones = repositories["newphone"].get_by_id(id)
+        return object_to_json(newphones)
 
-    @app.route("/api/contact/<id>", methods=["DELETE"])
-    def delete_contact_by_id(id):
-        contact_removed = repositories["contact"].remove_contact_by_id(id)
-        return ""
+    #@app.route("/api/newphone/<id>", methods=["DELETE"])
+    #def delete_contact_by_id(id):
+       # contact_removed = repositories["newphone"].remove_contact_by_id(id)
+        #return ""
 
     return app

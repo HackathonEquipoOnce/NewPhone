@@ -1,4 +1,4 @@
-get /api/contacts
+get /api/newphone
 
 [
     {

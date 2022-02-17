@@ -41,12 +41,7 @@ export default {
      // const response = await fetch("http://localhost:5000/api/phone");
       //this.phones = await response.json();
     },
-    del(phone){
-      
-      let index=this.phones.indexOf(phone)
-      this.phones.splice(index, 1)
-      console.log("elemento borrado")
-    }
+ 
   },
 }
 </script>

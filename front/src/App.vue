@@ -1,8 +1,6 @@
 <template>
   <div id="nav">
-    <select name="menus" id="menus">
-        <option v-for="index in menus" :key="index.code" :value="index.code" >{{index.name}}</option>
-    </select>
+   
     <router-link class="home" :to="{name: 'newphone'} "></router-link>
     </div>
     <img class="Log" src="@/assets/img/Logo1.png" />

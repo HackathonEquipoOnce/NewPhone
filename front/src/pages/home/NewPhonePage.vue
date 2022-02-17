@@ -2,7 +2,7 @@
 
   <h2>{{welcome}}  </h2>
     <img class="banner" src="@/assets/img/firstimage.png" />
-     populares
+     <h1>Populares</h1>
       <div class="container">
   <ul class="slider">
     <li id="slide1">
@@ -50,7 +50,7 @@
     </div>
    
     </article>
-     <div class="footer">&copy;Hackathon2022_coders_sin_fronteras_Grupo11</div>
+     <div class="footer">&copy;Hackathon2022@Coders-sin-Fronteras-Grupo11</div>
   </section>
 </template>
 
@@ -82,9 +82,7 @@ export default {
 }
 </script>
 
-<<<<<<< HEAD
 <style> 
-=======
 <style>
 *{
   text-decoration: none;
@@ -107,7 +105,6 @@ background-color:#0D0A96;
 
  }  
    
->>>>>>> aec3606d14f6c23a1a7d8cfb6400460782a8db34
    .menu-button{
     position: absolute;
     top: 10px;
@@ -145,7 +142,7 @@ background-color:#0D0A96;
   .phone-list{
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin-button:20px;
     flex-wrap: wrap;
     align-items: center;
   }
@@ -165,12 +162,17 @@ background-color:#0D0A96;
   }
 
   .banner{
-  max-width:1300px;
+  max-width:1500px;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom:30px;
+  margin: 30px 0px;
+ 
+ 
   }
-
+.footer{
+background-color:#6457A6;
+padding:20px 0px;
+width: 100%;
+}
   .info{
 
   width:300px;
@@ -184,64 +186,6 @@ background-color:#0D0A96;
   box-shadow:  2px 2px 4px #0D0A96;
 }
 
-<<<<<<< HEAD
-=======
-.footer
-
-  @media only screen and (min-width: 768px) {
-    .App-header {
-    width: 100%;
-    height: 100px;
-    background-color: #a5a5a555;
-    
-   }
-    
-    .Log{
-      width: 220px;
-      height: 200px;
-      
-    }
-    .star{
-      position: absolute;
-      top: 25px;
-      right: 520px;
-      width: 50px;
-      height: 50px;
-    }
-    .menu-btn{
-      display: none;
-    }
-    .menu-content{
-      position: absolute;
-      height: 100px;
-      top: 30px;
-      background: none;
-      text-align: right;
-      transition:  none;
-      margin-right: 50px;
-      
-    }
-    .menu-content li{
-      display: inline-block;
-      line-height: 10px;
-      margin-right: 100px;
-      margin-top: 0px;
-      transition: none;
-      
-    }
-    .menu-content li a{
-      font-size: 22px;
-      
-    }
-    .menu-content li a{
-      color: #6457A6;
-     
-    }
-    .menu-content li a.active, .menu-content li a:hover{
-      color: #0D0A96;
-      transition: .3s;
-    }
->>>>>>> aec3606d14f6c23a1a7d8cfb6400460782a8db34
 
 
 </style>

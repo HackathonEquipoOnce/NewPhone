@@ -40,9 +40,11 @@ export default {
 </script>
 
 <style scoped>
-.contact-details {
-  border: 2px solid dodgerblue;
+.phone-details{
+  max-width:400px;
+  border: 2px solid #FFE600;
   border-radius: 1em;
   margin: 1em;
+  text-align: center;
 }
 </style>

@@ -8,19 +8,13 @@
       v-for="phone in phones"
       :key="phone.id"
     >
-    <div> <header class="App-header">
-      
-      
-      <input type="checkbox" id='menu-button' />
-      <label htmlFor="menu-button" class='menu-btn'>
-        <img class='menu' src={Menu} alt='this is the menu' />
-      </label>
     
-    </header></div>
+    <div class='info'>
     <h2>{{ phone.nombre }}</h2>
-    <p>Precio {{ phone.precio }}</p>
+    <p>{{ phone.precio }}</p>
     <p>{{ phone.price }}</p><br>
     <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button>detaills</button></router-link><br>
+    </div>
     </article>
   </section>
 </template>
@@ -64,12 +58,7 @@ export default {
   list-style: none;
 }
 
-.App-header {
-    width: 100%;
-    height: 70px;
-    background-color: #a5a5a555;
-    
-   }
+
    .Log{
      width: 150px;
      height: 130px;
@@ -109,6 +98,13 @@ export default {
     text-transform: uppercase;
     font-weight: 600;
   }
+
+  .phone-list{
+   display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
   .menu-content li a.active, .menu-content li a:hover{
     color: blue;
     transition: .3s;
@@ -123,6 +119,17 @@ export default {
   #menu-button:checked ~ .menu-content li{
    display: block;
   }
+  .info{
+
+  width:400px;
+  border: 2px solid #FFE600;
+  border-radius: 10px;
+ text-align:center;
+  margin: 20px;
+  padding: 20px ;
+  border-radius:10px;
+  box-shadow:  2px 2px 8px #000000;
+}
 
   @media only screen and (min-width: 768px) {
     .App-header {

@@ -57,12 +57,12 @@ export default {
       return{
 
         phones: [
-          {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},
-          {id:3, nombre:"xiaomi popofone", precio:"230 $", caracteristicas:"camera 64MP"},
-          {id:4, nombre:"samsung", precio:"230 $", caracteristicas:"camera 64MP"},
-          {id:5, nombre:"samsung", precio:"290 $", caracteristicas:"camera 64MP"},
-          {id:6, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP"}, 
-          {id:7, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP",},    
+          {id:1, nombre:"xiaomi redmi 10", precio:"201 $", caracteristicas:"camera 64MP"},
+          {id:3, nombre:"xiaomi popofone", precio:"190 $", caracteristicas:"camera 64MP"},
+          {id:4, nombre:"samsung", precio:"200 $", caracteristicas:"camera 64MP"},
+          {id:5, nombre:"samsung", precio:"270 $", caracteristicas:"camera 64MP"},
+          {id:6, nombre:"iphone", precio:"310 $", caracteristicas:"camera 64MP"}, 
+          {id:7, nombre:"iphone", precio:"290 $", caracteristicas:"camera 64MP",},    
         ],
         phone_removed:'',
       }

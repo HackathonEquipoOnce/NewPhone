@@ -12,46 +12,46 @@ database_path = "data/database.db"
 #info_repository.save(Info(app_name="contact-list"))
 
 contact_repository = NewphoneRepository(database_path)
-Xiaomi = Newphone(
+mobil_1 = Newphone(
     id= "1",
     nombre= "xiaomi redmi 10",
     precio= "230 $",
     caracteristicas= "camera 64MP",
 )
-xiaomi = Newphone(
+mobil_2 = Newphone(
     id= "2",
     nombre= "xiaomi popofone",
     precio= "250 $",
     caracteristicas= "camera 64MP",
 )
-Samsung = Newphone(
+mobil_s = Newphone(
     id= "3",
     nombre= "samsung",
     precio= "230 $",
     caracteristicas= "camera 64MP",
 )
-samsung = Newphone(
+mobil_S = Newphone(
     id= "4",
     nombre= "samsung galaxy M30",
     precio= "290 $",
     caracteristicas= "camera 64MP",
 )
-Iphone = Newphone(
+mobil_i = Newphone(
     id= "5",
     nombre= "iphone 11",
     precio= "330 $",
     caracteristicas= "camera 90MP",
 )
-iphone = Newphone(
+mobil_I = Newphone(
     id= "6",
     nombre= "iphone 12 S",
     precio= "350 $",
     caracteristicas= "camera 180MP",
 )
 
-contact_repository.save(Xiaomi)
-contact_repository.save(xiaomi)
-contact_repository.save(Samsung)
-contact_repository.save(samsung)
-contact_repository.save(Iphone)
-contact_repository.save(iphone)
+contact_repository.save(mobil_1)
+contact_repository.save(mobil_2)
+contact_repository.save(mobil_s)
+contact_repository.save(mobil_S)
+contact_repository.save(mobil_i)
+contact_repository.save(mobil_I)

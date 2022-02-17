@@ -34,14 +34,13 @@ class NewphoneRepository:
                 id varchar,
                 nombre varchar,
                 precio varchar,
-                caracteristicas varchar,
+                caracteristicas varchar
             )
         """
         conn = self.create_conn()
         cursor = conn.cursor()
         cursor.execute(sql)
         conn.commit()
-        cursor.close()
 
     def get_all(self):
         sql = """select * from newphones"""
@@ -54,9 +53,9 @@ class NewphoneRepository:
         for item in data:
             each_phone = Newphone(
                 id= item["id"],
-                first_name = item["nombre"],
-                last_name = item["precio"],
-                email= item["caracteristicas"],
+                nombre= item["nombre"],
+                precio= item["precio"],
+                caracteristicas= item["caracteristicas"],
             )
             contacts.append(each_phone)
 

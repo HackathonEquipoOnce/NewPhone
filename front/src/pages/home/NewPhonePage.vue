@@ -20,7 +20,7 @@ export default {
     data(){
       return{
         welcome:"Welcome To Your new phone page",
-        phones: [],
+        phones: {},
         phone_removed:'',
       }
     },
@@ -32,7 +32,7 @@ export default {
     del(phone){
       
       let index=this.phones.indexOf(phone)
-      this.phone_removed=this.phones.splice(index, 1)
+      this.phones.splice(index, 1)
       console.log("elemento borrado")
     }
   },

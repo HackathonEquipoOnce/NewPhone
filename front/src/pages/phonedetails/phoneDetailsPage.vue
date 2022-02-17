@@ -5,7 +5,7 @@
   <p>{{ phone.price }}</p>
   <p>{{ phone.price}}</p>
   <p>{{ phone.price }}</p><br><br>
-  <router-link :to="{name:'newphone'}" @click="volverAHomePage" >volver a pagina de inicio</router-link>
+  <router-link :to="{name:'newphone'}" @click="volverAHomePage" ><button class="volver">volver a pagina de inicio</button></router-link>
   </section>
 </template>
 

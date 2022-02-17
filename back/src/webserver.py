@@ -13,10 +13,6 @@ def create_app(repositories):
     def hello_world():
         return "...magic!"
 
-    @app.route("/api/info", methods=["GET"])
-    def info_get():
-        info = repositories["info"].get_info()
-        return object_to_json(info)
 
     @app.route("/api/contact", methods=["GET"])
     def contact_get_all():

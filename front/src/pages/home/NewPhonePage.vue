@@ -23,8 +23,7 @@
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>
     <p>{{ phone.price }}</p><br>
-    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button>detaills</button></router-link><br><br>
-    <button class="remove" @click="del(phone)" >remove contact</button>
+    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button>detaills</button></router-link><br>
     </article>
   </section>
 </template>

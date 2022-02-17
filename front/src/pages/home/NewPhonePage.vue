@@ -1,7 +1,7 @@
 <template>
   <h2>{{welcome}} </h2>
   <img class="Log" src="@/assets/img/Logo1.png" />
-    <img src="@/assets/img/firstimage.png" />
+    <img class="banner" src="@/assets/img/firstimage.png" />
    <section class="phone-list">
     <article
       class="phone-item"
@@ -96,10 +96,11 @@ export default {
   }
 
   .phone-list{
-   display: flex;
+    display: flex;
     justify-content: center;
     margin: 20px;
     flex-wrap: wrap;
+    align-items: center;
   }
   .menu-content li a.active, .menu-content li a:hover{
     color: blue;
@@ -115,12 +116,17 @@ export default {
   #menu-button:checked ~ .menu-content li{
    display: block;
   }
+
+  .banner{
+  max-width:1400px;
+  width: 100%;
+  }
   .info{
 
   width:400px;
   border: 2px solid #FFE600;
   border-radius: 10px;
- text-align:center;
+  text-align:center;
   margin: 20px;
   padding: 20px ;
   border-radius:10px;

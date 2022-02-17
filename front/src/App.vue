@@ -2,6 +2,7 @@
   <div id="nav">
     <router-link class="home" :to="{name: 'newphone'} "></router-link>
     </div>
+    <img class="Log" src="@/assets/img/Logo1.png" />
       <div class="star">
         <img src="@/assets/img/Star.png" />
       </div>
@@ -16,6 +17,7 @@
 export default {
      data(){
        return{
+         imgage:'./Logo1.png',
          img:'./assets/img/Star.png',
        }
      } 

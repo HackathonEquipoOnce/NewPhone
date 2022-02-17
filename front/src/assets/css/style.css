@@ -19,9 +19,11 @@
   color: #42b983;
 }
 .Log{
-  width: 150px;
-  height: 130px;
-  
+  width: 250px;
+  height: 230px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
 .newphone{
   font-weight: bold;

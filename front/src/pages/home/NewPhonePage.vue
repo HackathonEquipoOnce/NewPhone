@@ -1,6 +1,6 @@
 <template>
   <h2>{{welcome}} </h2>
-  <img class="Log" src="@/assets/img/Logo1.png" />
+  
     <img class="banner" src="@/assets/img/firstimage.png" />
    <section class="phone-list">
     <article
@@ -24,7 +24,7 @@ export default {
     data(){
       return{
         welcome:"Tu movil viejo por uno nuevo facil por poco 👍",
-        imgage:'./Logo1.png',
+        
         img: './firstimage.png',
         phones: [
           {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},

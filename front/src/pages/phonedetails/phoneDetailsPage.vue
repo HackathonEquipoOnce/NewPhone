@@ -5,7 +5,7 @@
   <p>{{ phone.price }}</p>
   <p>{{ phone.price}}</p>
   <p>{{ phone.price }}</p><br><br>
-  <button @click="volverAHomePage">remove phone</button>
+  <router-link :to="{name:'newphone'}" @click="volverAHomePage" >volver a pagina de inicio</router-link>
   </section>
 </template>
 
@@ -26,7 +26,9 @@ export default {
     //.catch(err=> console.log(err.message))
   },
   methods:{
-     
+    volverAHomePage(){
+      this.$router.push("/")
+    }
   }
 }
 </script>

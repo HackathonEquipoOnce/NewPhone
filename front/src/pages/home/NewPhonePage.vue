@@ -1,4 +1,5 @@
 <template>
+
   <h2>{{welcome}} </h2>
   
     <img class="banner" src="@/assets/img/firstimage.png" />
@@ -8,7 +9,6 @@
       v-for="phone in phones"
       :key="phone.id"
     >
-    
     <div class='info'>
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>

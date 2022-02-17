@@ -37,7 +37,7 @@
     <article
       class="phone-item"
       v-for="phone in phones"
-      :key="phone.id"
+      :key="phone.price"
     >
     <div class='info'>
     <h2>{{ phone.nombre }}</h2>

@@ -59,11 +59,7 @@ export default {
 }
 
 
-   .Log{
-     width: 150px;
-     height: 130px;
-     
-   }
+   
    
    .menu-button{
     position: absolute;

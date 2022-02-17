@@ -1,8 +1,41 @@
 <template>
 
-  <h2>{{welcome}} </h2>
-  
+  <h2>{{welcome}}  </h2>
     <img class="banner" src="@/assets/img/firstimage.png" />
+     populares
+      <div class="container">
+  <ul class="slider">
+    <li id="slide1">
+      <img src="https://tigocolombia.vteximg.com.br/arquivos/ids/159022-1000-1000/Motorola-G30-GrisTornasol_1.png?v=637545576852730000"/>
+    </li>
+    <li id="slide2">
+      <img src="https://tigocolombia.vteximg.com.br/arquivos/ids/159797-1000-1000/Samsung-A72-Negro_1.png?v=637650061521070000"/>
+    </li>
+    <li id="slide3">
+    <img src="https://tigocolombia.vteximg.com.br/arquivos/ids/159782-1000-1000/SM_A325_GalaxyA32_Awesome-Blue_Front-min.png?v=637650041524070000"/>
+    </li>
+    <li id="slide4">
+    <img src="https://www.alkomprar.com/medias/6941059631002-001-750Wx750H?context=bWFzdGVyfGltYWdlc3w0NDM0NDR8aW1hZ2UvcG5nfGltYWdlcy9oNTUvaDJmLzkyMjQ0NjE2MTUxMzQucG5nfDEwNGYyOWNhNmM2MWZjNGI1YWMyMmFlYzA1NTcyNjcyNzU5YmYzZjJmYTFkYmM5MDNkNzk3ZjM4MmZlYmVjNmU"/>
+    </li>
+  </ul>
+  
+  <ul class="menu">
+    <li>
+      <a href="#slide1">1</a>
+    </li>
+    <li>
+      <a href="#slide2">2</a>
+    </li>
+     <li>
+      <a href="#slide3">3</a>
+    </li>
+    <li>
+      <a href="#slide4">4</a>
+    </li>
+  </ul>
+ 
+
+</div>
    <section class="phone-list">
     <article
       class="phone-item"
@@ -25,6 +58,7 @@ export default {
       return{
         welcome:"Tu movil viejo por uno nuevo facil por poco 👍",
         img: './firstimage.png',
+
         phones: [
           {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},
           {id:3, nombre:"xiaomi popofone", precio:"230 $", caracteristicas:"camera 64MP"},
@@ -46,15 +80,7 @@ export default {
 }
 </script>
 
-<style>
-*{
-  text-decoration: none;
-  list-style: none;
-}
-
-
-   
-   
+<style> 
    .menu-button{
     position: absolute;
     top: 10px;
@@ -112,9 +138,12 @@ export default {
   }
 
   .banner{
-  max-width:1400px;
+  max-width:1300px;
   width: 100%;
+  margin-top: 30px;
+  margin-bottom:30px;
   }
+
   .info{
 
   width:400px;
@@ -127,59 +156,6 @@ export default {
   box-shadow:  2px 2px 8px #000000;
 }
 
-  @media only screen and (min-width: 768px) {
-    .App-header {
-    width: 100%;
-    height: 100px;
-    background-color: #a5a5a555;
-    
-   }
-    
-    .Log{
-      width: 220px;
-      height: 200px;
-      
-    }
-    .star{
-      position: absolute;
-      top: 25px;
-      right: 520px;
-      width: 50px;
-      height: 50px;
-    }
-    .menu-btn{
-      display: none;
-    }
-    .menu-content{
-      position: absolute;
-      height: 100px;
-      top: 30px;
-      background: none;
-      text-align: right;
-      transition:  none;
-      margin-right: 50px;
-      
-    }
-    .menu-content li{
-      display: inline-block;
-      line-height: 10px;
-      margin-right: 100px;
-      margin-top: 0px;
-      transition: none;
-      
-    }
-    .menu-content li a{
-      font-size: 22px;
-      
-    }
-    .menu-content li a{
-      color: #6457A6;
-     
-    }
-    .menu-content li a.active, .menu-content li a:hover{
-      color: #0D0A96;
-      transition: .3s;
-    }
 
-  }
+
 </style>

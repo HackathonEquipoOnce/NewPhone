@@ -21,7 +21,7 @@
       </ul>
     </header></div>
     <h2>{{ phone.nombre }}</h2>
-    <p>{{ phone.precio }}</p>
+    <p>Precio {{ phone.precio }}</p>
     <p>{{ phone.price }}</p><br>
     <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button>detaills</button></router-link><br>
     </article>
@@ -36,12 +36,12 @@ export default {
         imgage:'./Logo1.png',
         img: './firstimage.png',
         phones: [
-          {id:1, nombre:"xiaomi redmi 10", precio:"230", caracteristicas:"camera 64MP"},
-          {id:3, nombre:"xiaomi popofone", precio:"230", caracteristicas:"camera 64MP"},
-          {id:4, nombre:"samsung", precio:"230", caracteristicas:"camera 64MP"},
-          {id:5, nombre:"samsung", precio:"290", caracteristicas:"camera 64MP"},
-          {id:6, nombre:"iphone", precio:"330", caracteristicas:"camera 64MP"}, 
-          {id:7, nombre:"iphone", precio:"330", caracteristicas:"camera 64MP",},    
+          {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},
+          {id:3, nombre:"xiaomi popofone", precio:"230 $", caracteristicas:"camera 64MP"},
+          {id:4, nombre:"samsung", precio:"230 $", caracteristicas:"camera 64MP"},
+          {id:5, nombre:"samsung", precio:"290 $", caracteristicas:"camera 64MP"},
+          {id:6, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP"}, 
+          {id:7, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP",},    
         ],
         phone_removed:'',
       }

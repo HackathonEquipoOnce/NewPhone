@@ -13,9 +13,11 @@
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>
     <p>{{ phone.price }}</p><br>
-    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button>detaills</button></router-link><br>
+    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button class="button">Detalles</button></router-link><br>
     </div>
+   
     </article>
+     <div class="footer">&copy;Hackathon2022_coders_sin_fronteras_Grupo11</div>
   </section>
 </template>
 
@@ -58,8 +60,21 @@ export default {
   list-style: none;
 }
 
+.button{
+padding:10px;
+border-radius:5px;
+background-color:#6457A6;
+color:#ffffff;
+box-shadow:  2px 2px 4px #0D0A96;
+cursor:pointer;
+ }  
 
-   
+.button:hover{
+padding:10px;
+border-radius:5px;
+background-color:#0D0A96;
+
+ }  
    
    .menu-button{
     position: absolute;
@@ -123,15 +138,18 @@ export default {
   }
   .info{
 
-  width:400px;
+  width:300px;
+   
   border: 2px solid #FFE600;
   border-radius: 10px;
   text-align:center;
   margin: 20px;
   padding: 20px ;
   border-radius:10px;
-  box-shadow:  2px 2px 8px #000000;
+  box-shadow:  2px 2px 4px #0D0A96;
 }
+
+.footer
 
   @media only screen and (min-width: 768px) {
     .App-header {

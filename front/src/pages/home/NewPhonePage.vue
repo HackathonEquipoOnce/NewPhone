@@ -10,15 +10,12 @@
     >
     <div> <header class="App-header">
       
-      <img class='star' src={Star} alt='this is the fav' />
+      
       <input type="checkbox" id='menu-button' />
       <label htmlFor="menu-button" class='menu-btn'>
         <img class='menu' src={Menu} alt='this is the menu' />
       </label>
-      <ul class='menu-content'>
-         <li class='active'> <a href="#">Usados</a></li>
-         <li> <a href="#">Nuevos</a></li>
-      </ul>
+    
     </header></div>
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>
@@ -79,11 +76,7 @@ export default {
      height: 130px;
      
    }
-   .star{
-     position: absolute;
-     top: 15px;
-     right: 90px;
-   }
+   
    .menu-button{
     position: absolute;
     top: 10px;

@@ -1,6 +1,6 @@
 <template>
   <h2>{{welcome}} </h2>
-  <img v-bind:src="@ /assets/firstimage.png"/>
+    <img src="@/assets/img/firstimage.png" />
    <section class="phone-list">
     <article
       class="phone-item"
@@ -21,7 +21,7 @@ export default {
     data(){
       return{
         welcome:"Welcome To Your new phone page",
-        img: '../assets/firstimage.jpg',
+        img: './firstimage.png',
         phones: [
           {id:1, nombre:"xiaomi redmi 10", precio:"230", caracteristicas:"camera 64MP"},
           {id:3, nombre:"xiaomi popofone", precio:"230", caracteristicas:"camera 64MP"},

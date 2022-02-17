@@ -26,7 +26,6 @@ export default {
     data(){
       return{
         welcome:"Tu movil viejo por uno nuevo facil por poco 👍",
-        
         img: './firstimage.png',
         phones: [
           {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},

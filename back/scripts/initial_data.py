@@ -8,9 +8,6 @@ from src.domain.newphone import NewphoneRepository, Newphone
 
 database_path = "data/database.db"
 
-#info_repository = InfoRepository(database_path)
-#info_repository.save(Info(app_name="contact-list"))
-
 contact_repository = NewphoneRepository(database_path)
 mobil_1 = Newphone(
     id= "1",

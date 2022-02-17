@@ -142,7 +142,7 @@ background-color:#0D0A96;
   .phone-list{
     display: flex;
     justify-content: center;
-    margin-button:20px;
+    margin-bottom:20px;
     flex-wrap: wrap;
     align-items: center;
   }

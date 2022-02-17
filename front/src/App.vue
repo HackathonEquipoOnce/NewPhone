@@ -23,7 +23,7 @@ export default {
          imgage:'./Logo1.png',
          img:'./assets/img/Star.png',
           menus:[
-        {code:0, name:'='},
+        {code:0, name:''},
         {code:1, name:'Usados'},
         {code:2, name: 'Nuevos'},
       ],

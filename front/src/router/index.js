@@ -1,22 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import NewPhone from '../views/Home.vue'
+import newphone from '@/pages/home/NewPhonePage.vue'
+import phonedetails from '@/pages/phonedetails/phoneDetailsPage.vue'
+import adsposting  from '@/pages/ads/adsPostingPage.vue'
+
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: NewPhone
+    name: 'newphone',
+    component: newphone
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/newphone/:id',
+    name: 'phonedetails',
+    component: phonedetails,
+    props: true
+  },
+  {
+    path: '/newphone/add',
+    name: 'adsposting',
+    component: adsposting
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 })
 
 export default router

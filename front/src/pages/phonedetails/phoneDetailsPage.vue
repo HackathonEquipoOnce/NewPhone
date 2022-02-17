@@ -1,10 +1,9 @@
 <template>
   <p>{{id}} </p>
   <section class="phone-details">
-  <h2>{{ phone.price }}</h2>
-  <p>{{ phone.price }}</p>
-  <p>{{ phone.price}}</p>
-  <p>{{ phone.price }}</p><br><br>
+  <h2>{{phone.nombre}}</h2>
+  <p>{{phone.precio }}</p>
+  <p>{{phone.caracteristicas}}</p>
   <router-link :to="{name:'newphone'}" @click="volverAHomePage" ><button class="volver">volver a pagina de inicio</button></router-link>
   </section>
 </template>
@@ -15,7 +14,14 @@ export default {
   props:['id'],
   data() {
     return {
-      phone: {},
+       phone: [
+          {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},
+          {id:3, nombre:"xiaomi popofone", precio:"230 $", caracteristicas:"camera 64MP"},
+          {id:4, nombre:"samsung", precio:"230 $", caracteristicas:"camera 64MP"},
+          {id:5, nombre:"samsung", precio:"290 $", caracteristicas:"camera 64MP"},
+          {id:6, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP"}, 
+          {id:7, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP",},    
+        ],
       Response:''
     };
   },

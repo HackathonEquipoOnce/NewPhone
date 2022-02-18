@@ -16,22 +16,15 @@ export default {
   props:['id'],
   data() {
     return {
-       phone: [
-          {id:1, nombre:"xiaomi redmi 10", precio:"$230 ", caracteristicas:"camera 64MP"},
-          {id:3, nombre:"xiaomi popofone", precio:"$230 ", caracteristicas:"camera 64MP"},
-          {id:4, nombre:"samsung", precio:"$230 ", caracteristicas:"camera 64MP"},
-          {id:5, nombre:"samsung", precio:"$290 ", caracteristicas:"camera 64MP"},
-          {id:6, nombre:"iphone", precio:"$330 ", caracteristicas:"camera 64MP"}, 
-          {id:7, nombre:"iphone", precio:"$330 ", caracteristicas:"camera 64MP",},    
-        ],
+       phone: {},
       Response:''
     };
   },
   async mounted() {
-   // await fetch("http://localhost:5000/api/phone/" + this.id)
-   // .then(res => res.json())
-   // .then(data => this.phone = data)
-    //.catch(err=> console.log(err.message))
+    await fetch("http://localhost:5000/api/newphone/" + this.id)
+    .then(res => res.json())
+    .then(data => this.phone = data)
+    .catch(err=> console.log(err.message))
   },
   methods:{
     volverAHomePage(){

@@ -60,21 +60,14 @@ export default {
         welcome:"Tu movil viejo por uno nuevo facil por poco 👍",
         img: './firstimage.png',
 
-        phones: [
-          {id:1, nombre:"xiaomi redmi 10", precio:"230 $", caracteristicas:"camera 64MP"},
-          {id:3, nombre:"xiaomi popofone", precio:"230 $", caracteristicas:"camera 64MP"},
-          {id:4, nombre:"samsung", precio:"230 $", caracteristicas:"camera 64MP"},
-          {id:5, nombre:"samsung", precio:"290 $", caracteristicas:"camera 64MP"},
-          {id:6, nombre:"iphone", precio:"330 $", caracteristicas:"camera 64MP"}, 
-          {id:7, nombre:"iphone 12 S", precio:"350 $", caracteristicas:"camera 64MP",},    
-        ],
+        phones:{},
         phone_removed:'',
       }
     },
       methods: {
     async loadData() {
-     // const response = await fetch("http://localhost:5000/api/phone");
-      //this.phones = await response.json();
+      const response = await fetch("http://localhost:5000/api/newphone");
+      this.phones = await response.json();
     },
  
   },

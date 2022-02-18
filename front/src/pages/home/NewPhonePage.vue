@@ -59,8 +59,11 @@ export default {
         phone_removed:'',
       }
     },
-      methods: {
-    async loadData() {
+    mounted(){
+      this.loadData()
+    },
+    methods:{
+     async loadData() {
       const response = await fetch("http://192.168.21.88:5000/api/newphone");
       this.phones = await response.json();
     },

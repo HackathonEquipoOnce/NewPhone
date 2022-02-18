@@ -42,7 +42,6 @@
     <div class='info'>
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>
-    <p>{{ phone.price }}</p><br>
     <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button class="button">Detalles</button></router-link><br>
     </div>
    
@@ -62,7 +61,7 @@ export default {
     },
       methods: {
     async loadData() {
-      const response = await fetch("http://localhost:5000/api/newphone");
+      const response = await fetch("http://192.168.21.88:5000/api/newphone");
       this.phones = await response.json();
     },
  

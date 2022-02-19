@@ -32,8 +32,6 @@
       <a href="#slide4">4</a>
     </li>
   </ul>
- 
-
 </div>
    <section class="phone-list">
     <article
@@ -46,7 +44,6 @@
     <p>{{ phone.precio }}</p>
     <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button class="button">Detalles</button></router-link><br>
     </div>
-   
     </article>
      <div class="footer">&copy;Hackathon2022@Coders-sin-Fronteras-Grupo11</div>
   </section>

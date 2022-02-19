@@ -1,5 +1,5 @@
 <template>
-<input type="text">
+  <input class="filtro" type="text" v-model="filtered_product" placeholder="buscar productos">
      <h1>{{Populares}}</h1>
       <div class="container">
   <ul class="slider">
@@ -59,24 +59,39 @@ export default {
       return{
         Populares:"Populares",
         phones: {},
-        filtext_newphone:'',
+        filtered_product:'',
         phone_removed:'',
+        result:[],
       }
     },
     mounted(){
-      this.loadData()
+      this.loadProducts()
+      
     },
+    computed:{
+      //filteredProducts(){
+        //console.log('entrando')
+      //console.log('entrando')
+      //this.$result=this.phones.filter((s) => s.tolowercaswe().includes('this.filtered_product.toLowerCase()'))
+      // return this.$result
+       //for(index of this.phones){
+          //if(index.toLocaleLowerCase().includes(this.filtered_product.toLocaleLowerCase())){
+            //this.$result.push(country)
+          //}
+        //}
+        //return this.$result
+      //}
+    //}
+  },
     methods:{
-     async loadData() {
+     async loadProducts() {
       const response = await fetch('http://192.168.1.131:5000/api/newphone');
       this.phones = await response.json();
     },
- 
-  },
+  }
 }
 </script>
 
-<style> 
 <style>
 *{
   text-decoration: none;
@@ -98,6 +113,13 @@ border-radius:5px;
 background-color:#0D0A96;
 
  }  
+ .filtro{
+   border: solid 1px;
+   border-radius: 5px;
+   width: 30%;
+   padding: 20px;
+   margin-bottom: 10%;
+ }
    
    .menu-button{
     position: absolute;

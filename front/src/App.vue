@@ -1,5 +1,4 @@
 <template>
-
   <div id="nav">
     <router-link class="home" :to="{name: 'newphone'} "></router-link>
     </div>
@@ -8,7 +7,6 @@
         <img src="@/assets/img/Star.png" />
       </div>
     <div>
-    
     <router-link class="newphone" :to="{name: 'newphone'}"> Usados</router-link>
     <router-link class="adsposting" :to="{name: 'secondHandPhone'}">Nuevos</router-link>
   </div>

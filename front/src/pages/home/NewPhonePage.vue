@@ -1,5 +1,5 @@
 <template>
-<input type="text" v-model="filtext_newphone">
+<input type="text">
      <h1>{{Populares}}</h1>
       <div class="container">
   <ul class="slider">

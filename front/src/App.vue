@@ -1,6 +1,6 @@
 <template>
+
   <div id="nav">
-   
     <router-link class="home" :to="{name: 'newphone'} "></router-link>
     </div>
     <img class="Log" src="@/assets/img/Logo1.png" />

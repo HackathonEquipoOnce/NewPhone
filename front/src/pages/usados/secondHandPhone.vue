@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import { config } from "@/config.js";
+config;
 export default {
     data(){
       return{
@@ -68,7 +70,7 @@ export default {
     },
     methods: {
       async loadData() {
-        const response = await fetch("http://192.168.21.88:5000/api/newphone");
+        const response = await fetch('http://192.168.1.131:5000/api/newphone');
         this.phones = await response.json();
     },
  

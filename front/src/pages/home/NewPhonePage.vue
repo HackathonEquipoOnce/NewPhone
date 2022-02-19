@@ -1,4 +1,5 @@
 <template>
+<input type="text" v-model="filtext_newphone">
      <h1>{{Populares}}</h1>
       <div class="container">
   <ul class="slider">
@@ -51,11 +52,14 @@
 </template>
 
 <script>
+import config from "@/config.js";
+config.route_Path;
 export default {
     data(){
       return{
         Populares:"Populares",
         phones: {},
+        filtext_newphone:'',
         phone_removed:'',
       }
     },
@@ -64,7 +68,7 @@ export default {
     },
     methods:{
      async loadData() {
-      const response = await fetch("http://192.168.21.88:5000/api/newphone");
+      const response = await fetch('http://192.168.1.131:5000/api/newphone');
       this.phones = await response.json();
     },
  

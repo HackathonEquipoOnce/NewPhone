@@ -1,5 +1,6 @@
 <template>
   <input class="filtro" type="text" v-model="filtered_product" placeholder="buscar productos">
+  <button class="buscar"  @click="filteredProducts()"><span>buscar</span></button>
      <h1>{{Populares}}</h1>
       <div class="container">
   <ul class="slider">
@@ -38,7 +39,7 @@
     <article
       class="phone-item"
       v-for="phone in phones"
-      :key="phone.price"
+      :key="phone"
     >
     <div class='info'>
     <h2>{{ phone.nombre }}</h2>
@@ -69,25 +70,28 @@ export default {
       
     },
     computed:{
-      //filteredProducts(){
-        //console.log('entrando')
-      //console.log('entrando')
-      //this.$result=this.phones.filter((s) => s.tolowercaswe().includes('this.filtered_product.toLowerCase()'))
-      // return this.$result
-       //for(index of this.phones){
-          //if(index.toLocaleLowerCase().includes(this.filtered_product.toLocaleLowerCase())){
-            //this.$result.push(country)
-          //}
-        //}
-        //return this.$result
-      //}
-    //}
-  },
+    },
     methods:{
      async loadProducts() {
       const response = await fetch('http://192.168.1.131:5000/api/newphone');
       this.phones = await response.json();
     },
+    filteredProducts(){
+        const {phones, filtered_product}=this;
+        return phones.filter(({phone}) => phone.includes(filtered_product))
+      }
+    //filteredProducts(phone){
+      //console.log('entrando')
+      
+        //this.$result=this.phones.filter((s) => s.tolowercaswe().includes(this.filtered_product.toLowerCase()))
+        //return this.$result
+       //for(phone of this.phones){
+          //if(phone.toLocaleLowerCase().includes(this.filtered_product.toLocaleLowerCase())){
+          //this.$result.push(phone)
+         //}
+        //}
+        //return this.$result
+      //}
   }
 }
 </script>
@@ -119,6 +123,24 @@ background-color:#0D0A96;
    width: 30%;
    padding: 20px;
    margin-bottom: 10%;
+ }
+ ::placeholder{
+   color: #1a191b;
+   font-size: 1em;
+ }
+ .buscar{
+   border: solid 1px;
+   border-radius: 5px;
+   width: 15%;
+   padding: 20px;
+   margin-bottom: 10%;
+   margin-left: 1%;
+ }
+ .buscar> span{
+   display: grid;
+   justify-content: center;
+   margin: auto;
+   color: rgba(54, 41, 235, 0.699);
  }
    
    .menu-button{

@@ -1,6 +1,8 @@
 <template>
 <h2>{{welcome}}  </h2>
-    <img class="banner" src="@/assets/img/firstimage.png" />
+ <input class="filtro" type="text" v-model="filtered_product" placeholder="buscar productos">
+  <button class="buscar"  @click="filteredProducts()"><span>buscar</span></button><br>
+    <img class="banner" src="@/assets/img/firstimage.png" /><br>
      <h1>Populares</h1>
       <div class="container">
   <ul class="slider">
@@ -67,7 +69,7 @@ export default {
     },
     methods: {
       async loadData() {
-        const response = await fetch('http://192.168.1.131:5000/api/newphone');
+        const response = await fetch('http://192.168.21.88:5000/api/newphone');
         this.phones = await response.json();
     },
  
@@ -95,7 +97,32 @@ padding:10px;
 border-radius:5px;
 background-color:#0D0A96;
 
- }  
+ } 
+  .filtro{
+   border: solid 1px;
+   border-radius: 5px;
+   width: 30%;
+   padding: 20px;
+   margin-bottom: 10%;
+ }
+ ::placeholder{
+   color: #1a191b;
+   font-size: 1em;
+ }
+ .buscar{
+   border: solid 1px;
+   border-radius: 5px;
+   width: 15%;
+   padding: 20px;
+   margin-bottom: 10%;
+   margin-left: 1%;
+ }
+ .buscar> span{
+   display: grid;
+   justify-content: center;
+   margin: auto;
+   color: rgba(54, 41, 235, 0.699);
+ } 
    
    .menu-button{
     position: absolute;

@@ -54,7 +54,7 @@
 
 <script>
 import config from "@/config.js";
-config.route_Path;
+config;
 export default {
     data(){
       return{
@@ -73,7 +73,7 @@ export default {
     },
     methods:{
      async loadProducts() {
-      const response = await fetch('http://192.168.1.131:5000/api/newphone');
+      const response = await fetch('http://192.168.21.88:5000/api/newphone');
       this.phones = await response.json();
     },
     filteredProducts(){
@@ -125,7 +125,7 @@ background-color:#0D0A96;
    margin-bottom: 10%;
  }
  ::placeholder{
-   color: #1a191b;
+   color: #e811f0;
    font-size: 1em;
  }
  .buscar{
@@ -135,6 +135,7 @@ background-color:#0D0A96;
    padding: 20px;
    margin-bottom: 10%;
    margin-left: 1%;
+   margin-top: 5%;
  }
  .buscar> span{
    display: grid;

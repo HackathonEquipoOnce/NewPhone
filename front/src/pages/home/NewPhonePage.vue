@@ -38,7 +38,7 @@
    <section class="phone-list">
     <article
       class="phone-item"
-      v-for="phone in phones"
+      v-for="phone in filteredProducts()"
       :key="phone"
     >
     <div class='info'>
@@ -59,7 +59,7 @@ export default {
     data(){
       return{
         Populares:"Populares",
-        phones: {},
+        phones: [],
         filtered_product:'',
         phone_removed:'',
         result:[],
@@ -77,8 +77,9 @@ export default {
       this.phones = await response.json();
     },
     filteredProducts(){
-        const {phones, filtered_product}=this;
-        return phones.filter(({phone}) => phone.includes(filtered_product))
+        const phones = this.phones
+        const filtered_product= this.filtered_product
+        return phones.filter((phone) => phone.nombre.includes(filtered_product))
       }
     //filteredProducts(phone){
       //console.log('entrando')

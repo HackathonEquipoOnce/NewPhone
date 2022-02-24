@@ -38,7 +38,7 @@
    <section class="phone-list">
     <article
       class="phone-item"
-      v-for="phone in phones"
+      v-for="phone in filteredProducts()"
       :key="phone.id"
     >
     <div class='info'>
@@ -60,7 +60,8 @@ export default {
         welcome:"Tu movil viejo por uno nuevo facil por poco 👍",
         img: './firstimage.png',
 
-        phones:{},
+        phones:[],
+        filtered_product:'',
         phone_removed:'',
       }
     },
@@ -72,6 +73,11 @@ export default {
         const response = await fetch('http://192.168.21.88:5000/api/newphone');
         this.phones = await response.json();
     },
+    filteredProducts(){
+      const phones = this.phones
+      const filtered_product= this.filtered_product
+      return phones.filter((phone) => phone.nombre.includes(filtered_product))
+    }
  
   },
 }

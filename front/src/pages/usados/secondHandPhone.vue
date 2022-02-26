@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { config } from "@/config.js";
+import config  from "@/config.js";
 config;
 export default {
     data(){
@@ -70,7 +70,8 @@ export default {
     },
     methods: {
       async loadData() {
-        const response = await fetch('http://192.168.21.88:5000/api/newphone');
+        //console.log("data")
+        const response = await fetch(`${config.route_Path}/newphone`);
         this.phones = await response.json();
     },
     filteredProducts(){

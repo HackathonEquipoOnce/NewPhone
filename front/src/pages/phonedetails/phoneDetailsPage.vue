@@ -11,8 +11,7 @@
 </template>
 
 <script>
-import { config } from "@/config.js";
-config;
+import config from "@/config.js";
 export default {
   name:'phonedetails',
   props:['id'],
@@ -23,7 +22,7 @@ export default {
     };
   },
   async mounted() {
-    await fetch('http://192.168.1.131:5000/api/newphone/' + this.id)
+    await fetch(`${config.route_Path}/newphone/` + this.id)
     .then(res => res.json())
     .then(data => this.phone = data)
     .catch(err=> console.log(err.message))

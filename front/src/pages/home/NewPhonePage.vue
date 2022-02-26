@@ -54,7 +54,6 @@
 
 <script>
 import config from "@/config.js";
-config;
 export default {
     data(){
       return{
@@ -73,7 +72,8 @@ export default {
     },
     methods:{
      async loadProducts() {
-      const response = await fetch('http://192.168.21.88:5000/api/newphone');
+       //console.log("data")
+      const response = await fetch(`${config.route_Path}/newphone`);
       this.phones = await response.json();
     },
     filteredProducts(){

@@ -1,11 +1,13 @@
 <template>
+<h2>{{shoppingBasket}} </h2>
 <div class="details">
   <p>{{id}} </p>
   <section class="phone-details">
   <h2>{{phone.nombre}}</h2>
   <p>{{phone.precio }}</p>
   <p>{{phone.caracteristicas}}</p>
-  <router-link :to="{name:'newphone'}" @click="volverAHomePage" ><button class="volver">volver a pagina de inicio</button></router-link>
+  <router-link :to="{name:'newphone'}" @click="volverAHomePage" ><button class="volver">volver a pagina de inicio</button></router-link><br><br>
+  <button @click="Carrito">añadir al carrito</button>
   </section>
   </div>
 </template>
@@ -17,8 +19,9 @@ export default {
   props:['id'],
   data() {
     return {
-       phone: {},
-      Response:''
+      phone: {},
+      Response:'',
+      cestaDeLaCompra:[]
     };
   },
   async mounted() {
@@ -27,11 +30,21 @@ export default {
     .then(data => this.phone = data)
     .catch(err=> console.log(err.message))
   },
+  computed:{
+    shoppingBasket(){
+      let productAmount= this.cestaDeLaCompra.length
+      return productAmount
+    }
+  },
   methods:{
     volverAHomePage(){
       this.$router.push("/")
+    },
+    Carrito(){
+      this.cestaDeLaCompra.push(this.phone)
     }
   }
+
 }
 </script>
 

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import newphone from '@/pages/home/NewPhonePage.vue'
 import phonedetails from '@/pages/phonedetails/phoneDetailsPage.vue'
 import secondHandPhone  from '@/pages/usados/secondHandPhone.vue'
+import shoppingBasket  from '@/pages/shoppingBasket/shoppingBasketPage.vue'
 
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     path: '/newphone/add',
     name: 'secondHandPhone',
     component: secondHandPhone
+  },
+  {
+    path: '/basket',
+    name: 'shoppingBasket',
+    component: shoppingBasket
   },
 ]
 

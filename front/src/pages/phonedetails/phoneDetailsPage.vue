@@ -1,7 +1,6 @@
 <template>
-<h2>{{shoppingBasket}} </h2>
+<button @click="theBasket" ><h2>{{shoppingBasket}} </h2></button>
 <div class="details">
-  <p>{{id}} </p>
   <section class="phone-details">
   <h2>{{phone.nombre}}</h2>
   <p>{{phone.precio }}</p>
@@ -42,6 +41,9 @@ export default {
     },
     Carrito(){
       this.cestaDeLaCompra.push(this.phone)
+    },
+    theBasket(){
+      this.$router.push("/basket")
     }
   }
 

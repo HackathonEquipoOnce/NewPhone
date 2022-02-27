@@ -1,5 +1,5 @@
 <template>
-<button @click="theBasket" ><h2>{{shoppingBasket}} </h2></button>
+<button @click="theBasket" class="basket"><h2>{{shoppingBasket}}<span>🛍️</span> </h2></button>
 <div class="details">
   <section class="phone-details">
   <h2>{{phone.nombre}}</h2>
@@ -57,6 +57,12 @@ export default {
   border-radius: 1em;
   margin: 1em;
   text-align: center;
+}
+.basket{
+  width: 10rem;
+}
+span{
+  width: 50em;
 }
 
 .volver{

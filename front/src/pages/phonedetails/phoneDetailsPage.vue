@@ -1,5 +1,7 @@
 <template>
-<button @click="theBasket" class="basket"><h2 v-show="displaySelected">{{shoppingBasket}}</h2><span>🛒</span></button>
+<button @click="theBasket" class="basket">
+  <h2 class="number" v-show="displaySelected">{{shoppingBasket}}</h2>
+  <span class="cesta">🛒</span></button>
 <div class="details">
   <section class="phone-details">
   <h2>{{phone.nombre}}</h2>
@@ -62,6 +64,12 @@ export default {
 }
 .basket{
   width: 10rem;
+}
+.number{
+  color: #ff008c;
+}
+.cesta{
+  font-size: 3em;
 }
 span{
   width: 50em;

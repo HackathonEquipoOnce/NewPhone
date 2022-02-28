@@ -1,5 +1,5 @@
 <template>
-<button @click="theBasket" class="basket"><h2>{{shoppingBasket}}<span>🛍️</span> </h2></button>
+<button @click="theBasket" class="basket"><h2 v-show="displaySelected">{{shoppingBasket}}</h2><span>🛒</span></button>
 <div class="details">
   <section class="phone-details">
   <h2>{{phone.nombre}}</h2>
@@ -20,7 +20,8 @@ export default {
     return {
       phone: {},
       Response:'',
-      cestaDeLaCompra:[]
+      cestaDeLaCompra:[],
+      displaySelected: false
     };
   },
   async mounted() {
@@ -41,6 +42,7 @@ export default {
     },
     Carrito(){
       this.cestaDeLaCompra.push(this.phone)
+      this.displaySelected= true
     },
     theBasket(){
       this.$router.push("/basket")

@@ -1,7 +1,6 @@
 <template>
 <div class="details">
 <section>
-<button @click="getBackToPreviousPage" class="previous">volver a la pagina anterior</button>
 <button @click="getBackToHomePage" class="backhome">volver a la pagina principal</button>
 </section>
 </div>
@@ -14,11 +13,6 @@ export default {
     return {
       phone: {}
     };
-  },
-  async mounted() {
-  },
-  computed:{
-    
   },
   methods:{
     getBackToPreviousPage(){

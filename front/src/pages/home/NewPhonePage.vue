@@ -44,7 +44,8 @@
     <div class='info'>
     <h2>{{ phone.nombre }}</h2>
     <p>{{ phone.precio }}</p>
-    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" ><button class="button">Detalles</button></router-link><br>
+    <router-link :to="{name:'phonedetails', params:{id: phone.id}}" >
+    <button class="button">Detalles</button></router-link><br>
     </div>
    
     </article>

@@ -1,4 +1,5 @@
 <template>
+<p v-show="showID">{{id}}</p>
 <button @click="theBasket" class="basket">
   <h2 class="number" v-show="displaySelected">{{shoppingBasket}}</h2>
   <span class="cesta">🛒</span></button>
@@ -23,7 +24,8 @@ export default {
       phone: {},
       Response:'',
       cestaDeLaCompra:[],
-      displaySelected: false
+      displaySelected: false,
+      showID: false,
     };
   },
   async mounted() {
@@ -63,7 +65,7 @@ export default {
   text-align: center;
 }
 .basket{
-  width: 10rem;
+  background-color: white;
 }
 .number{
   color: #ff008c;

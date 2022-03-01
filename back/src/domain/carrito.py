@@ -1,7 +1,7 @@
 import sqlite3
 
 
-class Newphone:
+class Carrito:
     def __init__(self, id, nombre, precio, caracteristicas):
         self.id= id
         self.nombre = nombre
@@ -18,7 +18,7 @@ class Newphone:
             }
 
 
-class NewphoneRepository:
+class CarritoRepository:
     def __init__(self, database_path):
         self.database_path = database_path
         self.init_tables()
@@ -30,7 +30,7 @@ class NewphoneRepository:
 
     def init_tables(self):
         sql = """
-            create table if not exists newphones(
+            create table if not exists carritos(
                 id varchar,
                 nombre varchar,
                 precio varchar,
@@ -43,42 +43,42 @@ class NewphoneRepository:
         conn.commit()
 
     def get_all(self):
-        sql = """select * from newphones"""
+        sql = """select * from carritos"""
         conn = self.create_conn()
         cursor = conn.cursor()
         cursor.execute(sql)
 
         data = cursor.fetchall()
-        phones = []
+        baskets = []
         for item in data:
-            each_phone = Newphone(
+            basket_phones = Carrito(
                 id= item["id"],
                 nombre= item["nombre"],
                 precio= item["precio"],
                 caracteristicas= item["caracteristicas"],
             )
-            phones.append(each_phone)
+            baskets.append(basket_phones)
 
 
-        return phones
+        return baskets
 
     def get_by_id(self, id):
-        sql = """select * from newphones where id=:id"""
+        sql = """select * from carritos where id=:id"""
         conn = self.create_conn()
         cursor = conn.cursor()
         cursor.execute(sql, {"id": id})
 
         data = cursor.fetchone()
-        newphone = Newphone(**data)
+        newphone = Carrito(**data)
 
         return newphone
     
-    def save(self, contact):
-        sql = """insert into newphones (id, nombre, precio, caracteristicas) values (
+    def save(self, basket_phone):
+        sql = """insert into carritos (id, nombre, precio, caracteristicas) values (
             :id, :nombre, :precio, :caracteristicas
         ) """
         conn = self.create_conn()
         cursor = conn.cursor()
-        cursor.execute(sql, contact.to_dict())
+        cursor.execute(sql, basket_phone.to_dict())
         conn.commit()
         cursor.close()

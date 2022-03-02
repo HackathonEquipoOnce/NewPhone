@@ -77,7 +77,7 @@ export default {
     filteredProducts(){
       const phones = this.phones
       const filtered_product= this.filtered_product
-      return phones.filter((phone) => phone.nombre.includes(filtered_product))
+      return phones.filter((phone) => phone.nombre.toLowerCase().includes(filtered_product.toLowerCase()))
     }
  
   },
